@@ -21,6 +21,9 @@ public class TaskThree {
         System.out.println(fuzzySearch("0lWWw", "0lcartwheelWWdw") + " - true"); // true
         System.out.println(fuzzySearch("0lWWw", "00lcartwheelWWdw") + " - true"); // true
         System.out.println(fuzzySearch("lwW", "lw") + " - false"); // false
+        System.out.println(fuzzySearch(null, "lw") + " - false"); // false
+        System.out.println(fuzzySearch("lwW", null) + " - false"); // false
+        System.out.println(fuzzySearch(null, null) + " - false"); // false
     }
 
     /**
@@ -31,7 +34,7 @@ public class TaskThree {
      * @return boolean value
      */
     public static boolean fuzzySearch(String target, String str){
-        if (target.length() <= str.length()){
+        if (target != null && str != null && target.length() <= str.length()){
 
             int valueToSkip = 0, counterOfDuplicate = 0;
             char duplicateChar = 0;

@@ -55,4 +55,5 @@ public class TaskThreeTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
 }
