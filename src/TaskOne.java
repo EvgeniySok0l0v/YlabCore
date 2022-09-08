@@ -42,6 +42,7 @@ public class TaskOne {
             new Person(6, "Amelia"),
             new Person(7, "Amelia"),
             new Person(8, "Amelia"),
+            new Person(9,null),
     };
 
     /**
@@ -69,6 +70,7 @@ public class TaskOne {
     public static Map<Object, List<Person>> getPeople(Person[] people){
         return Arrays.stream(people)
                 .distinct()
+                .filter(p -> p.name != null)
                 .sorted(Comparator.comparingInt(p -> p.id))
                 .collect(Collectors.groupingBy(p -> p.name));
     }

@@ -23,6 +23,7 @@ public class TaskOneTest {
                 new TaskOne.Person(6, "Amelia"),
                 new TaskOne.Person(7, "Amelia"),
                 new TaskOne.Person(8, "Amelia"),
+                new TaskOne.Person(9,null),
     };
 
     @Test
